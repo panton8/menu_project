@@ -14,7 +14,7 @@ class MenuItem(models.Model):
     header = models.ForeignKey(MenuHeader, on_delete=models.CASCADE)
     title = models.CharField(max_length=60, unique=True)
     url = models.URLField(blank=True)
-    root = models.ForeignKey('self', on_delete=models.CASCADE)
+    root = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title
