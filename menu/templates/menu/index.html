@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headers Menu</title>
+</head>
+<body style="text-align: center;">
+    {% if headers %}
+        <ol style="font-size: 32px; display: inline-block; text-align: left;">
+            {% for header in headers %}
+                <li><a href="{{ header }}">{{ header }}</a></li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+</body>
+</html>
