@@ -1,0 +1,5 @@
+.git/
+.dockerignore
+.gitignore
+.pre-commit-config.yaml
+data/db
