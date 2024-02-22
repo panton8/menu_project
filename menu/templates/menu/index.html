@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Headers Menu</title>
 </head>
-<body style="text-align: center;">
+{% load menu_tags %}
+<body>
     {% if headers %}
-        <ol style="font-size: 32px; display: inline-block; text-align: left;">
+        <ol>
             {% for header in headers %}
                 <li><a href="{{ header }}">{{ header }}</a></li>
             {% endfor %}
         </ol>
+    {% elif header %}
+        <h3><a href={% url 'headers' %}>Back on Headers</a></h3>
+        {% draw_menu header item %}
     {% endif %}
 </body>
 </html>
