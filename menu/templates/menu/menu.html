@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submenu</title>
+</head>
+<body>
+<ul>
+    {% for item in menu %}
+        {% if item.url %}<li><a href='{{ item.url }}'>{{ item }}</a></li>
+        {% elif item.title %}<li><a href='{{ item.title }}'>{{ item }}</a></li>
+        {% else %}{% include 'menu/menu.html' with menu=item %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+</body>
+</html>
